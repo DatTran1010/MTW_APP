@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "609456644079",
+    "project_id": "motorwatchappv2",
+    "storage_bucket": "motorwatchappv2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:609456644079:android:81b79d0f2d0523ee2c601a",
+        "android_client_info": {
+          "package_name": "com.motorwatchapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAaE6MYIN96mnYdAgwKsLV5mB22Py9mWj4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
