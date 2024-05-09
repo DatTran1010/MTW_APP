@@ -105,8 +105,6 @@ const Login: React.FC<LoginProps> = ({navigation}) => {
   };
 
   const handleLogin = async () => {
-    console.log('Tài khoản login', userName, password);
-
     const baseURL = await asyncStorageItem.baseURL();
     if (baseURL === '') {
       dispatch(setOverlay(false));

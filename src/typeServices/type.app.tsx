@@ -3,9 +3,9 @@ export interface MachineListType {
   iD_TB: number;
   mS_MAY: string;
   teN_MAY: string;
-  kW_DAT: number;
+  kW_DAT: string;
   phaN_TRAM_DAT: number;
-  kW_CHUA_DAT: number;
+  kW_CHUA_DAT: string;
   phaN_TRAM_CHUA_DAT: number;
   chI_PHI_DAT: string;
   chI_PHI_CHUA_DAT: string;
@@ -18,6 +18,7 @@ export interface MonitorType {
   thongKeLoiVanHanh: ThongKeLoiVanHanhItem[];
   thongSoVanHanh: ThongSoVanHanhItem[];
   typE_MACHINE: number;
+  loI_BT: string;
 }
 
 interface ThongKeLoiVanHanhItem {

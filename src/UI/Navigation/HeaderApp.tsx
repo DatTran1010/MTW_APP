@@ -90,8 +90,6 @@ const HeaderApp: React.FC<HeaderAppProps> = ({
   goBack = false,
   colorHeader = Colors.colorHeader,
 }) => {
-  console.log(colorHeader);
-  
   useEffect(() => {
     navigation.setOptions({
       headerStyle: {

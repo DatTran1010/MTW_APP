@@ -1,4 +1,4 @@
-import {TextProps} from 'react-native';
+import {TextProps, TextStyle} from 'react-native';
 import Colors from './Colors';
 import {WIDTH_SCREEN} from './Dimentions';
 
@@ -19,9 +19,9 @@ interface ShadowProps {
 
 interface ThemeProps extends TextProps {
   fontFamily: string;
-  font: FontProps;
-  fontBold: Omit<FontProps, 'fontFamily'>;
-  fontTitle: Omit<FontProps, 'color'>; // Bỏ qua thuộc tính 'color' trong fontTitle
+  font: TextStyle;
+  fontBold: TextStyle;
+  fontTitle: TextStyle; // Bỏ qua thuộc tính 'color' trong fontTitle
   shadow: ShadowProps;
   fontSize: number;
 }

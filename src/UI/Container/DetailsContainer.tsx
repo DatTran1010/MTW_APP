@@ -85,7 +85,7 @@ const DetailsContainer: React.FC<DetailsContainerProps> = ({
             />
           )}
         />
-        <Tab.Screen
+        {/* <Tab.Screen
           name="ReportMaChine"
           options={{
             tabBarLabel: t('bao-cao-giam-sat-dong-co'),
@@ -99,7 +99,7 @@ const DetailsContainer: React.FC<DetailsContainerProps> = ({
               startDate={route.params.dateToFrom.startDate}
             />
           )}
-        />
+        /> */}
       </Tab.Navigator>
     </View>
   );

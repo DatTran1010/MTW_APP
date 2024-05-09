@@ -5,6 +5,7 @@ import {
   Text,
   View,
   RefreshControl,
+  ViewStyle,
 } from 'react-native';
 import React, {memo} from 'react';
 import {useTranslation} from 'react-i18next';
@@ -68,21 +69,26 @@ const Monitor: React.FC<MonitorProps> = ({
               {moment(dateToFrom.endDate).format('DD/MM/YYYY')}
             </Text>
             <View style={styles.tinhTrangDongCo}>
-              <Text
-                style={[
-                  Theme.fontTitle,
-                  // eslint-disable-next-line react-native/no-inline-styles
-                  {
-                    color:
-                      dataMonitor.data.typE_MACHINE === 1
-                        ? Colors.chart1
-                        : 'red',
-                  },
-                ]}>
-                {dataMonitor.data.typE_MACHINE === 1
-                  ? t('dong-co-khong-can-bao-tri')
-                  : t('dong-co-can-bao-tri')}
-              </Text>
+              <View>
+                <Text
+                  style={[
+                    Theme.fontTitle,
+                    // eslint-disable-next-line react-native/no-inline-styles
+                    {
+                      color:
+                        dataMonitor.data.typE_MACHINE === 1
+                          ? Colors.chart1
+                          : 'red',
+                    },
+                  ]}>
+                  {dataMonitor.data.typE_MACHINE === 1
+                    ? t('dong-co-khong-can-bao-tri')
+                    : t('dong-co-can-bao-tri')}
+                </Text>
+              </View>
+            </View>
+            <View>
+              <Text style={Theme.font}>{dataMonitor.data.loI_BT}</Text>
             </View>
           </View>
           <View style={styles.bodyContainer}>
@@ -125,7 +131,7 @@ const Monitor: React.FC<MonitorProps> = ({
                                   ? '95%'
                                   : PHAN_TRAM_GIOI_HAN.toString() + '%',
                               backgroundColor: item.color,
-                            },
+                            } as ViewStyle,
                           ]}>
                           <Text style={Theme.font}>{item.thuC_TE}</Text>
                         </View>
@@ -133,9 +139,7 @@ const Monitor: React.FC<MonitorProps> = ({
                         <View style={styles.noteView}>
                           <Text style={Theme.font}>{item.teN_ND}</Text>
                           <View style={styles.gioiHanView}>
-                            <Text style={Theme.font}>
-                              {Math.max(item.gioI_HAN, item.gioI_HAN_2)}
-                            </Text>
+                            <Text style={Theme.font}>{item.gioI_HAN_2}</Text>
                           </View>
 
                           {item.gioI_HAN !== item.gioI_HAN_2 && (

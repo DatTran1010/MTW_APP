@@ -38,7 +38,6 @@ const SelectionComponent: React.FC<SelectionComponentProps> = ({
   isBarCode = false,
   ...props
 }) => {
-  console.log('render -selection');
 
   const [isShow, setIsShow] = useState<boolean>(false);
   const [selectedValue, setSelectedValue] = useState<DataProps>({

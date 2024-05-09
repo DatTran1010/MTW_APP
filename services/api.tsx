@@ -11,7 +11,6 @@ const callApi = async (
   const controller = new AbortController();
   try {
     const baseURL = await asyncStorageItem.baseURL();
-    console.log('URL', baseURL);
     const response = await axios.request({
       baseURL: baseURL,
       timeout: 5000,
@@ -27,22 +26,16 @@ const callApi = async (
       controller.abort();
     }, 9000);
 
-    console.log('URL là', response.request.responseURL);
-
     if (response.status == 200) {
       return response;
     } else if (response.status == 204) {
-      console.log('Log 204', response);
-
       return new Error('204');
     } else {
       return [];
     }
   } catch (error) {
     if (axios.isCancel(error)) {
-      console.log('Request canceled', error.message);
     } else {
-      console.log('Lỗi', error);
       //   console.log('responseURL', error.response.responseURL);
     }
 

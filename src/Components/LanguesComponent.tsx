@@ -16,7 +16,6 @@ const LanguesComponent = () => {
   const dispatch = useDispatch();
   const [isVisible, setIsVisible] = useState<boolean>(false);
 
-  console.log('languege', languege);
   //sk handle
 
   const handleSelectionLanguage = () => {

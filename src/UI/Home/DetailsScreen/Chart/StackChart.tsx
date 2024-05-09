@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import {View, Text, StyleSheet, ViewStyle} from 'react-native';
 
 import Colors from '../../../../Common/Colors';
 import {HEIGHT_CHART} from '../../../../Common/Dimentions';
@@ -83,7 +83,7 @@ const StackChart: React.FC<StackChartProps> = ({data}) => {
                       item.phaN_TRAM_HST === 0
                         ? Colors.chart1_opacity
                         : item.coloR_HST,
-                  },
+                  } as ViewStyle,
                 ]}>
                 {/* <Text style={styles.barText}>
                   {item.valuE_HST.toString() + '/ ' + item.phaN_TRAM_HST + '%'}
@@ -134,7 +134,7 @@ const StackChart: React.FC<StackChartProps> = ({data}) => {
                   {
                     width: item.phaN_TRAM_LP_KT + '%',
                     backgroundColor: item.coloR_LP_KT,
-                  },
+                  } as ViewStyle,
                 ]}>
                 {item.phaN_TRAM_LP_KT > 0 && (
                   <>

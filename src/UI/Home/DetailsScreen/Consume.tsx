@@ -1,4 +1,11 @@
-import {Platform, ScrollView, StyleSheet, Text, View} from 'react-native';
+import {
+  Platform,
+  ScrollView,
+  StyleSheet,
+  Text,
+  View,
+  ViewStyle,
+} from 'react-native';
 import React, {memo} from 'react';
 import {useTranslation} from 'react-i18next';
 import moment from 'moment';
@@ -228,7 +235,7 @@ const Consume: React.FC<ConsumeProps> = ({
                             ? '0'
                             : dataConsume.data.thoiGianChayMay[0].phaN_TRAM_CO_TAI.toString() +
                               '%',
-                      },
+                      } as ViewStyle,
                     ]}>
                     <View
                       style={[
@@ -304,7 +311,7 @@ const Consume: React.FC<ConsumeProps> = ({
               </View>
             </View>
 
-            <View style={styles.dienNangTT}>
+            {/* <View style={styles.dienNangTT}>
               <View
                 style={[
                   [
@@ -391,7 +398,7 @@ const Consume: React.FC<ConsumeProps> = ({
                   </Text>
                 </View>
               </View>
-            </View>
+            </View> */}
           </ScrollView>
         </Animated.View>
       ) : (
@@ -458,6 +465,7 @@ const styles = StyleSheet.create({
   viewNote: {
     flexDirection: 'row',
     marginVertical: 10,
+    alignItems: 'center',
   },
   noteIcon: {
     width: 15,

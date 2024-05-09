@@ -58,7 +58,6 @@ const MonitorRealTime: React.FC<MonitorRealTimeProps> = ({
 
   const createHubConnection = async () => {
     const url = await baseURL();
-    console.log(url + '/databieudo');
     const hubConnection = new HubConnectionBuilder()
       // .withUrl('http://192.168.2.21:7174/databieudo', {
       //   skipNegotiation: true,
@@ -83,9 +82,7 @@ const MonitorRealTime: React.FC<MonitorRealTimeProps> = ({
 
       await hubConnection
         .start()
-        .then(() => {
-          console.log('Connected to SignalR Hub');
-        })
+        .then(() => {})
         .catch((error: any) => {
           Alert.alert('Mất kết nối đến server');
           console.error('Error connecting to SignalR Hub:', error);
@@ -111,8 +108,6 @@ const MonitorRealTime: React.FC<MonitorRealTimeProps> = ({
       } catch {}
     }
   }, [ID_TB, hubConnection]);
-
-  console.log('renderrrrrrr = =================');
 
   useEffect(() => {
     const getData = async () => {

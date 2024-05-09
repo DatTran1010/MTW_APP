@@ -56,7 +56,6 @@ const QRCameraComponent = () => {
           dispatch(setResultScanned(data.trim()));
         })
         .catch(err => {
-          console.log(err);
           dispatch(
             setNotiferWarning({
               showNotifer: true,
